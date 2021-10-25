@@ -1,0 +1,10 @@
+.ma {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.ma__div {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}

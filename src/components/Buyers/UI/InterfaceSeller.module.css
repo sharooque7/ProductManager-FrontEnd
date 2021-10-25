@@ -1,0 +1,12 @@
+.Post_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+.Post_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: "400px";
+}

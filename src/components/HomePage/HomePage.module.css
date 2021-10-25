@@ -1,0 +1,10 @@
+.home {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__row {
+  display: flex;
+  justify-content: space-between;
+}
