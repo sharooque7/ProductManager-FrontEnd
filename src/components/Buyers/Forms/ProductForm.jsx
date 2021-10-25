@@ -48,9 +48,9 @@ const ProductForm = (props) => {
       console.log(value);
     }
     let method = "POST";
-    let url = "http://localhost:4000/feed/post";
+    let url = "https://productmanger.herokuapp.com/feed/post";
     if (props.Edit) {
-      url = "http://localhost:4000/feed/post/" + EditState.id;
+      url = "https://productmanger.herokuapp.com/feed/post/" + EditState.id;
       method = "PUT";
     }
     axios({

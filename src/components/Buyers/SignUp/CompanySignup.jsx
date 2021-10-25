@@ -53,9 +53,12 @@ const Signup = () => {
   const classes = useStyles();
 
   const handleSubmit = (fields) => {
-    const result = axios.put("http://localhost:4000/seller/signup", {
-      ...fields,
-    });
+    const result = axios.put(
+      "https://productmanger.herokuapp.com/seller/signup",
+      {
+        ...fields,
+      }
+    );
     result
       .then((res) => {
         if (res.status === 201) {

@@ -14,8 +14,10 @@ const InterfaceSeller = () => {
 
   const {
     open,
+
     onhandleOpen,
     onhandleClose,
+
     setpostsLoading,
     postPage,
     setpostPage,
@@ -24,6 +26,7 @@ const InterfaceSeller = () => {
     totalPosts,
     settotalPosts,
     postsLoading,
+
     setEditState,
   } = useContext(AuthContext);
   let page = postPage;
@@ -32,7 +35,7 @@ const InterfaceSeller = () => {
     const token = localStorage.getItem("token");
     axios({
       method: "get",
-      url: "http://localhost:4000/feed/posts?page=" + page,
+      url: "https://productmanger.herokuapp.com/feed/posts?page=" + page,
       headers: { Authorization: "Bearer " + token },
     })
       .then((res) => {
@@ -106,7 +109,6 @@ const InterfaceSeller = () => {
         setpostsLoading(false);
       })
       .catch((err) => console.log(err));
-    window.location.reload();
   };
 
   const EditProduct = (post) => {

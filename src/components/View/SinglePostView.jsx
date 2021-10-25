@@ -20,7 +20,7 @@ const SinglePostView = (props) => {
     const token = localStorage.getItem("token");
 
     axios({
-      url: "http://localhost:4000/feed/post/" + postId,
+      url: "https://productmanger.herokuapp.com/feed/post/" + postId,
       method: "get",
       headers: {
         Authorization: "Bearer " + token,
@@ -40,7 +40,7 @@ const SinglePostView = (props) => {
           ...prev,
           title: res.data.post.productName,
           author: res.data.post.creator,
-          image: "http://localhost:4000/" + b,
+          image: "https://productmanger.herokuapp.com/" + b,
           date: new Date(res.data.post.createdAt).toLocaleDateString("en-US"),
           content: res.data.post.productDescription,
         }));

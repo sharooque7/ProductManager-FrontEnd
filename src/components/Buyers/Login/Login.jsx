@@ -33,9 +33,12 @@ const Login = () => {
   const classes = useStyles();
 
   const handleSubmit = (fiedls) => {
-    const result = axios.post("http://localhost:4000/seller/Login", {
-      ...fiedls,
-    });
+    const result = axios.post(
+      "https://productmanger.herokuapp.com/seller/Login",
+      {
+        ...fiedls,
+      }
+    );
     result
       .then((res) => {
         console.log(res);
